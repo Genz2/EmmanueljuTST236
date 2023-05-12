@@ -30,8 +30,8 @@ view: orders {
     hidden: no
     view_label: "Date/Period Selection"
     convert_tz: no
-    sql:${TABLE}.created_at
-;;
+    datatype: date
+    sql:${TABLE}.created_at;;
   }
 
 
