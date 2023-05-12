@@ -31,7 +31,8 @@ view: orders {
     view_label: "Date/Period Selection"
     convert_tz: no
     datatype: date
-    sql: FORMAT_DATE("%b %d", ${TABLE}.created_at;;
+    sql: DATE_FORMAT(${TABLE}.created_at, '%b %d')
+;;
   }
 
 
