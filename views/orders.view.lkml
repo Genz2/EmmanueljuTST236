@@ -25,12 +25,23 @@ view: orders {
     sql: ${TABLE}.created_at ;;
   }
 
-  dimension: day_month_abbreviation {
-    type: date
+  dimension_group: day_month_abbreviation {
+    type: time
     hidden: no
     view_label: "Date/Period Selection"
     convert_tz: no
     datatype: date
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      month_name,
+      day_of_month,
+      quarter,
+      year
+    ]
     sql:sql: ${TABLE}.created_at;
 ;;
   }
