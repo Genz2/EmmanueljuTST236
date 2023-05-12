@@ -17,11 +17,23 @@ view: orders {
       date,
       week,
       month,
+      month_name,
+      day_of_month,
       quarter,
       year
     ]
     sql: ${TABLE}.created_at ;;
   }
+
+  dimension: day_month_abbreviation {
+    type: date
+    hidden: no
+    view_label: "Date/Period Selection"
+    convert_tz: no
+    datatype: date
+    sql: FORMAT_DATE("%b %d", ${TABLE}.created_at;;
+  }
+
 
   dimension: status {
     type: string
