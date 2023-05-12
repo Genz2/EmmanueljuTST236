@@ -42,7 +42,7 @@ view: orders {
       quarter,
       year
     ]
-    sql:${TABLE}.created_at;
+    sql:DATE_FORMAT(${TABLE}.created_at, '%b %d') ;
 ;;
   }
 
