@@ -27,6 +27,7 @@ view: orders {
 
   dimension: day_month_abbreviation {
     type: string
+    alpha_sort: no
     hidden: no
     view_label: "Date/Period Selection"
     sql:DATE_FORMAT(${TABLE}.created_at, '%b %d');;
