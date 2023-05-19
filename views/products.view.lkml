@@ -14,6 +14,7 @@ view: products {
   }
 
   dimension: category {
+    view_label: "total page view test"
     type: string
     sql: ${TABLE}.category ;;
   }
