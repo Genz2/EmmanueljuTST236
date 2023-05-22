@@ -48,6 +48,11 @@ view: order_items {
     type: number
     sql: ${TABLE}.sale_price ;;
   }
+  measure: total_revenue {
+    type: sum
+    sql: ${sale_price} ;;
+    value_format_name: usd_0
+  }
 
   measure: count {
     type: count
