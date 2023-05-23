@@ -58,4 +58,9 @@ view: order_items {
     type: count
     drill_fields: [id, orders.id, inventory_items.id]
   }
+measure: count_porcentage{
+  type: count
+  value_format: "0\%"
+  drill_fields: [id, orders.id, inventory_items.id]
+}
 }
