@@ -25,6 +25,11 @@ view: orders {
     sql: ${TABLE}.created_at ;;
   }
 
+  dimension: latest_order_date {
+    type: date
+    sql: ${TABLE}.created_date ;;
+  }
+
   dimension: day_month_abbreviation {
     type: string
     hidden: no

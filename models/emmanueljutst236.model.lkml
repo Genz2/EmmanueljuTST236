@@ -5,7 +5,7 @@ include: "/views/**/*.view"
 
 datagroup: emmanueljutst236_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  max_cache_age: "12 hours"
 }
 
 persist_with: emmanueljutst236_default_datagroup
