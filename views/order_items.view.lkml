@@ -49,7 +49,7 @@ view: order_items {
     sql: ${TABLE}.sale_price ;;
   }
   measure: total_revenue {
-    type: sum
+    type: number
     sql: ${sale_price} ;;
     value_format_name: decimal_2
   }
