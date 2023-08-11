@@ -51,7 +51,7 @@ view: order_items {
   measure: total_revenue {
     type: number
     sql: ${sale_price} ;;
-    value_format_name: decimal_2
+    value_format_name: usd
   }
 
   measure: count {
