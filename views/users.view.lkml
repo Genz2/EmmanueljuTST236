@@ -59,9 +59,9 @@ view: users {
     sql: ${TABLE}.gender ;;
   }
 
-  dimension: position{
+  dimension: domain {
     type: string
-    sql: position(${users.email},"@")
+    sql: (SUBSTRING_INDEX(SUBSTR(${email}, INSTR(${email}, '@') + 1),'.',1)) ;;
   }
 
   dimension: last_name {
