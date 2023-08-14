@@ -59,6 +59,12 @@ view: users {
     sql: ${TABLE}.gender ;;
   }
 
+  dimension: domain {
+    type: string
+    sql: 'domain_from_email(${email})'
+    required: true
+  }
+
   dimension: last_name {
     type: string
     sql: ${TABLE}.last_name ;;
@@ -84,7 +90,6 @@ view: users {
     fields: [
       id,
       first_name,
-      last_name,
       events.count,
       orders.count,
       saralooker.count,
