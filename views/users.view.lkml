@@ -59,10 +59,9 @@ view: users {
     sql: ${TABLE}.gender ;;
   }
 
-  dimension: domain {
+  dimension: position{
     type: string
-    sql: 'domain_from_email(${email})'
-    required: true
+    sql: position(${users.email},"@")
   }
 
   dimension: last_name {
