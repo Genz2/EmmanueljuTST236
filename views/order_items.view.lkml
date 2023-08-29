@@ -54,6 +54,12 @@ view: order_items {
     value_format_name: usd
   }
 
+  measure: total_revenue_zeroifnull {
+    type: number
+    sql: CASE WHEN ${sale_price} IS NULL THEN 0 ELSE ${sale_price} END ;;
+    value_format_name: usd
+  }
+
   measure: count {
     type: count
     drill_fields: [id, orders.id, inventory_items.id]
